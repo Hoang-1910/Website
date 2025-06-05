@@ -55,3 +55,8 @@ nav a::after {
 .relative#auto-banner-slider {
     min-height: 400px;
 }
+
+.clients-swiper .swiper-pagination {
+    margin-top: 24px !important;
+    position: static !important;
+}
