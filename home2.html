@@ -8,7 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./home2.css">
     <style>
         body {
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
@@ -18,6 +23,16 @@
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
             letter-spacing: -0.03em;
         }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: flex !important;
+            color: #202632 !important;
+            z-index: 20 !important;
+            opacity: 1 !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+        }
     </style>
 </head>
 
@@ -25,7 +40,7 @@
     <!-- Header -->
     <header class="flex justify-between items-center px-6 py-4 bg-[#eae9e4]">
         <div class="flex items-center gap-3">
-            <img src="https://ext.same-assets.com/4085776718/2416431392.svg" alt="Microsoft Logo" class="h-8 w-8">
+            <img src="./img/vssoft-logo.webp" alt="Microsoft Logo" class="h-8 w-8">
             <nav class="hidden md:flex gap-7 ml-6 font-medium text-base">
                 <a href="#" class="border-b-2 border-[#202632]">Trang chủ</a>
                 <a href="#">Giới thiệu</a>
@@ -39,81 +54,149 @@
 
     <!-- Hero -->
     <section class="text-center mb-12 mt-10 px-3 animate__animated animate__fadeInDown">
-        <h1 class="font-title text-5xl sm:text-7xl md:text-8xl font-light mb-4">Microsoft Design</h1>
-        <p class="text-lg md:text-xl text-[#484a4e] max-w-2xl mx-auto mb-8">We are Microsoft Design, a global UX
-            community exploring and shaping the future of technology humanity.</p>
+        <h1 class="font-title text-3xl sm:text-7xl md:text-8xl font-light mb-4">VSSOFT</h1>
+        <p class="text-lg md:text-xl text-[#484a4e] max-w-2xl mx-auto mb-8">Giải pháp phần mềm tiện ích</p>
     </section>
 
-    <!-- Feature Grid -->
-    <section class="mx-auto max-w-7xl px-4 grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-16">
-        <!-- Card 1 -->
-        <div class="col-span-2 aspect-square bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer hover:animate__pulse"
-            data-aos="fade-up" data-aos-delay="0">
-            <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
-                src="https://microsoft.design/wp-content/uploads/2025/05/Hero_Image_1080_Image_green-1.jpg"
-                alt="Surface Copilot+ PC" />
-            <div class="relative z-10 bg-black/40 backdrop-blur-sm rounded-xl p-4 text-white self-start">
-                <span class="text-xs tracking-widest font-semibold opacity-80">HARDWARE</span>
-                <h3 class="mt-1 text-xl font-bold">Surface Copilot+ PCs: Built to evolve, designed to adapt</h3>
-                <p class="opacity-75 text-sm mt-2">How we crafted a new line of Surface Copilot+ PCs to empower
-                    creation, connection and change.</p>
+    <!-- Slide Banner Tự Động -->
+    <section class="mx-auto max-w-7xl px-4 mb-16" style="min-height: 400px;">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg" id="auto-banner-slider" style="min-height: 600px;">
+            <div class="slide-item active">
+                <!-- Slide 1 nội dung -->
+                <img src="./img/vssoft.webp" alt="Surface Copilot+ PC" class="w-full object-cover rounded-2xl"
+                    style="height: 600px !important;" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-2xl">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 z-10 text-white">
+                    <span class="text-xs font-semibold tracking-widest text-white/80 mb-2 block">HARDWARE</span>
+                    <h3 class="text-2xl font-bold mb-2 drop-shadow">Surface Copilot+ PCs: Built to evolve, designed to
+                        adapt
+                    </h3>
+                    <p class="text-white/90 text-sm drop-shadow max-w-xl">How we crafted a new line of Surface Copilot+
+                        PCs to empower
+                        creation, connection and change.</p>
+                </div>
             </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
-            data-aos="fade-up" data-aos-delay="100">
-            <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
-                src="https://ext.same-assets.com/4085776718/814314394.png" alt="The em dash conspiracy" />
-            <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-4">
-                <span class="text-xs tracking-widest font-semibold text-[#202632] opacity-80">OP-ED</span>
-                <h3 class="mt-1 text-lg font-semibold">The em dash conspiracy: How pop culture declared war on
-                    literature’s favorite punctuation</h3>
-                <p class="text-xs mt-2 opacity-60">AI, Emily Dickinson, and the War on the Em Dash</p>
+            <div class="slide-item">
+                <!-- Slide 2 nội dung -->
+                <img src="./img/vssoft2.webp" alt="Surface Copilot+ PC" class="w-full object-cover rounded-2xl"
+                    style="height: 600px !important;" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-2xl">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 z-10 text-white">
+                    <span class="text-xs font-semibold tracking-widest text-white/80 mb-2 block">HARDWARE</span>
+                    <h3 class="text-2xl font-bold mb-2 drop-shadow">Surface Copilot+ PCs: Built to evolve, designed to
+                        adapt
+                    </h3>
+                    <p class="text-white/90 text-sm drop-shadow max-w-xl">How we crafted a new line of Surface Copilot+
+                        PCs to empower
+                        creation, connection and change.</p>
+                </div>
             </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
-            data-aos="fade-up" data-aos-delay="200">
-            <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
-                src="https://ext.same-assets.com/4085776718/1122928530.jpeg" alt="ClearType and onscreen reading" />
-            <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-4">
-                <span class="text-xs font-semibold text-[#202632]">DESIGN THINKING – UX/UI</span>
-                <h3 class="mt-1 text-lg font-semibold">From paper to pixels: The evolution of ClearType and onscreen
-                    reading</h3>
-                <p class="text-xs mt-2 opacity-60">How we made digital text like printed words on paper</p>
-            </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
-            data-aos="fade-up" data-aos-delay="300">
-            <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
-                src="https://ext.same-assets.com/4085776718/545846035.png" alt="Cultural diversity" />
-            <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-4">
-                <span class="text-xs font-semibold text-[#202632]">OP-ED – DESIGN THINKING</span>
-                <h3 class="mt-1 text-lg font-semibold">Design for cultural diversity: a perspective on global
-                    experiences</h3>
-                <p class="text-xs mt-2 opacity-60">Designing for diversity isn’t just about accessibility or
-                    localization—it’s about building bridges through shared understanding.</p>
-            </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
-            data-aos="fade-up" data-aos-delay="400">
-            <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
-                src="https://ext.same-assets.com/4085776718/569643894.jpeg" alt="Redesigning Windows Start menu" />
-            <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-4">
-                <span class="text-xs font-semibold text-[#202632]">UX/UI – BRAND</span>
-                <h3 class="mt-1 text-lg font-semibold">Start, Fresh — Redesigning the Windows Start menu for you</h3>
-                <p class="text-xs mt-2 opacity-60">Behind the scenes: how craft comes to life in Windows products and
-                    features.</p>
+            <div class="slide-item">
+                <!-- Slide 3 nội dung -->
+                <img src="https://ext.same-assets.com/4085776718/545846035.png" alt="Cultural diversity"
+                    class="w-full h-80 object-cover rounded-2xl" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-2xl">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 z-10 text-white">
+                    <span class="text-xs font-semibold tracking-widest text-white/80 mb-2 block">OP-ED – DESIGN THINKING
+                    </span>
+                    <h3 class="text-2xl font-bold mb-2 drop-shadow">Design for cultural diversity: a perspective on
+                        global
+                        experiences</h3>
+                    <p class="text-white/90 text-sm drop-shadow max-w-xl">Designing for diversity isn’t just about
+                        accessibility or
+                        localization—it’s about building bridges through shared understanding.</p>
+                </div>
             </div>
         </div>
     </section>
 
+
+    <!-- Production  -->
+    <div class="w-100 d-flex justify-content-center align-items-center max-w-7xl mx-auto px-4 mb-6">
+        <div class="text-center">
+            <h2 class="font-title text-3xl md:text-5xl font-light">Sản phẩm - Dịch vụ</h2>
+            <a href="#" class="text-[#1988fc] hover:underline text-sm font-semibold">Xem tất cả</a>
+        </div>
+    </div>
+    <section class="mx-auto max-w-7xl px-4 mb-16">
+        <div class="swiper product-swiper">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                    <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
+                            src="https://ext.same-assets.com/4085776718/1122928530.jpeg"
+                            alt="ClearType and onscreen reading" />
+                        <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-2">
+                            <h3 class="mt-1 text-lg font-semibold">Phần mềm EMRC</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                    <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
+                            src="https://ext.same-assets.com/4085776718/545846035.png" alt="Cultural diversity" />
+                        <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-4">
+                            <span class="text-xs font-semibold text-[#202632]">OP-ED – DESIGN THINKING</span>
+                            <h3 class="mt-1 text-lg font-semibold">Design for cultural diversity: a perspective on
+                                global
+                                experiences</h3>
+                            <p class="text-xs mt-2 opacity-60">Designing for diversity isn’t just about accessibility or
+                                localization—it’s about building bridges through shared understanding.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                    <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
+                            src="https://ext.same-assets.com/4085776718/1122928530.jpeg"
+                            alt="ClearType and onscreen reading" />
+                        <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-4">
+                            <span class="text-xs font-semibold text-[#202632]">DESIGN THINKING – UX/UI</span>
+                            <h3 class="mt-1 text-lg font-semibold">From paper to pixels: The evolution of ClearType and
+                                onscreen
+                                reading</h3>
+                            <p class="text-xs mt-2 opacity-60">How we made digital text like printed words on paper</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="swiper-slide">
+                    <div class="aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col justify-end relative group hover:shadow-lg transition cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition"
+                            src="https://ext.same-assets.com/4085776718/1122928530.jpeg"
+                            alt="ClearType and onscreen reading" />
+                        <div class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-4">
+                            <span class="text-xs font-semibold text-[#202632]">DESIGN THINKING – UX/UI</span>
+                            <h3 class="mt-1 text-lg font-semibold">From paper to pixels: The evolution of ClearType and
+                                onscreen
+                                reading</h3>
+                            <p class="text-xs mt-2 opacity-60">How we made digital text like printed words on paper</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thêm nhiều card khác nếu muốn -->
+            </div>
+            <!-- Nút điều hướng -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
     <!-- Banner -->
-    <section class="bg-black text-white py-12 md:py-16 flex flex-col items-center justify-center mb-10">
+    <section class="text-white py-12 md:py-16 flex flex-col items-center justify-center mb-10"
+        style="background-color: #1988fc;">
         <div class="flex flex-col md:flex-row items-center gap-5">
-            <span class="text-6xl md:text-8xl font-title font-bold opacity-70 blur-sm select-none">Microsoft</span>
+            <span class="text-6xl md:text-8xl font-title font-bold blur-sm select-none">Microsoft</span>
         </div>
         <div class="flex items-center mt-7">
             <button class="rounded-full border border-white p-2 mr-4 hover:bg-white/10 transition">
@@ -245,7 +328,6 @@
             </li>
         </ul>
     </section>
-
     <!-- Footer -->
     <footer class="mt-10 bg-[#eae9e4] py-6 border-t border-gray-300">
         <div
@@ -272,11 +354,35 @@
             </div>
         </div>
     </footer>
+    ...
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 900,
             once: true
+        });
+    </script>
+    <script src="./style.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper('.product-swiper', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
         });
     </script>
 </body>
