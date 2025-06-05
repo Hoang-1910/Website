@@ -60,3 +60,13 @@ nav a::after {
     margin-top: 24px !important;
     position: static !important;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex !important;
+    color: #202632 !important;
+    z-index: 20 !important;
+    opacity: 1 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
