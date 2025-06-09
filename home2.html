@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5e4f3dce79.js" crossorigin="anonymous"></script>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./home2.css">
@@ -38,25 +39,34 @@
 
 <body class="bg-[#eae9e4] text-[#202632]">
     <!-- Header -->
-    <header class="flex justify-between items-center px-6 py-4 bg-[#eae9e4]">
-        <div class="flex items-center gap-3">
-            <img src="./img/vssoft-logo.webp" alt="Microsoft Logo" class="h-8 w-8">
-            <nav class="hidden md:flex gap-7 ml-6 font-medium text-base">
-                <a href="#" class="border-b-2 border-[#202632]">Trang chủ</a>
-                <a href="#">Giới thiệu</a>
-                <a href="/TinTuc.html">Tin tức</a>
-                <a href="#">Sản phẩm - Dịch vụ</a>
-                <a href="#">Tuyển dụng</a>
-                <a href="#">Liên hệ</a>
-            </nav>
+    <header id="main-header" class="flex justify-between items-center px-6 py-2">
+        <div class="flex align-items-center gap-3 justify-content-between w-100">
+            <div class="header-left d-flex align-items-center">
+                <img src="./img/vssoft-logo.webp" alt="Microsoft Logo" class="h-8">
+                <nav class="hidden md:flex gap-7 ml-6 font-medium text-base">
+                    <a href="./home2.html" class="border-b-2 border-[#202632]">Trang chủ</a>
+                    <a href="./GioiThieu.html">Giới thiệu</a>
+                    <a href="./TinTuc.html">Tin tức</a>
+                    <a href="./Product.html">Sản phẩm - Dịch vụ</a>
+                    <a href="./TuyenDung.html">Tuyển dụng</a>
+                    <a href="./contact_page.html">Liên hệ</a>
+                </nav>
+            </div>
+            <button class="btn rounded-1" style="background-color: #79b9f4;">Buy Now</button>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="text-center mb-12 mt-10 px-3 animate__animated animate__fadeInDown">
-        <h1 class="font-title text-3xl sm:text-7xl md:text-8xl font-light mb-4">VSSOFT</h1>
-        <p class="text-lg md:text-xl text-[#484a4e] max-w-2xl mx-auto mb-8">Giải pháp phần mềm tiện ích</p>
+    <section class="hero-section text-center mb-12">
+        <div class="hero-image-container mb-3">
+            <img src="./img/jasper-lake-hero-banner.webp" alt="Ảnh nền" class="hero-image">
+            <div class="image-fade"></div>
+        </div>
+        <h1 class="font-title text-3xl sm:text-7xl md:text-8xl font-light mb-4" data-aos="fade-down">VSSOFT</h1>
+        <p class="text-lg md:text-xl text-[#484a4e] max-w-2xl mx-auto mb-8" data-aos="fade-right">Giải pháp phần mềm
+            tiện ích</p>
     </section>
+
 
     <!-- Slide Banner Tự Động -->
     <section class="mx-auto max-w-7xl px-4 mb-16" style="min-height: 400px;">
@@ -278,117 +288,137 @@
             </div>
         </div>
     </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact p-3">
+        <div class="container">
+            <div class="section-title" data-aos="fade-down">
+                <h2>Liên hệ</h2>
+                <p>Chúng tôi có thể làm gì cho quý khách</p>
+            </div>
 
-    <!-- Resources Section -->
-    <section class="max-w-4xl mx-auto px-4 mt-10 py-12">
-        <h3 class="font-title text-2xl md:text-3xl mb-6">Resources</h3>
-        <p class="text-lg mb-8 text-[#434343]">Whether you want to practice new skills, develop new concepts, or create
-            prototypes, these toolkits are your place to start.</p>
-        <ul>
-            <li class="flex justify-between border-b border-gray-300 py-4 group hover:bg-gray-100 transition"
-                data-aos="fade-left" data-aos-delay="0">
-                <div>
-                    <span class="font-semibold">Wallpapers</span>
-                    <span class="block text-sm text-[#606060]">Download your favorite wallpapers from Microsoft</span>
+            <div data-aos="fade-right" data-aos-delay="100">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4009.365801351651!2d105.77274781454946!3d20.969132728700934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d20.9686502176086!2d105.7703491587061!5e1!3m2!1svi!2s!4v1749098794241!5m2!1svi!2s"
+                    style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+                    frameborder="0"></iframe>
+                <!-- <iframe style="border:0; width: 100%; height: 270px;"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21066.317298142927!2d105.77566503008116!3d21.03132737515437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7df00879785c918!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gZ2nhuqNpIHBow6FwIGPDtG5nIG5naOG7hyBCQks!5e0!3m2!1svi!2sus!4v1622022733839!5m2!1svi!2sus"
+                    frameborder="0" allowfullscreen></iframe> -->
+            </div>
+
+            <div class="row mt-5">
+
+
+                <div class="col-lg card card-body shadow-sm mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                    <form method="post" enctype="multipart/form-data">
+
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <input class="form-control" placeholder="Your Name" required
+                                style="height: 44px; box-shadow: none; font-size: 14px; border-radius: 4px;" type="text"
+                                id="ClientEmail_CustomerName" name="ClientEmail.CustomerName" value="" />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ClientEmail.CustomerName"
+                                data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <input class="form-control" placeholder="Your Email" required
+                                style="height: 44px; box-shadow: none; font-size: 14px; border-radius: 4px;" type="text"
+                                id="ClientEmail_From" name="ClientEmail.From" value="" />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ClientEmail.From"
+                                data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <input class="form-control" placeholder="Subject" required
+                                style="height: 44px; box-shadow: none; font-size: 14px; border-radius: 4px;" type="text"
+                                id="ClientEmail_Subject" name="ClientEmail.Subject" value="" />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ClientEmail.Subject"
+                                data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <textarea class="form-control" placeholder="Message" required
+                                style="height: 44px; box-shadow: none; font-size: 14px; border-radius: 4px; "
+                                id="ClientEmail_Content" name="ClientEmail.Content">
+    </textarea>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ClientEmail.Content"
+                                data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <input type="submit" value="Send" class="btn btn-default"
+                                style="background: #a9e4ff; border: 0; padding: 10px 24px; color: #151515; transition: 0.4s; border-radius: 4px;" />
+                        </div>
+                        <input name="__RequestVerificationToken" type="hidden"
+                            value="CfDJ8MLfz5_X609Nv2tNsySlnoHj33mLP3m5oRx8wmkmLsl9v3bb2fYEbc6Ngfh2oZyyY4b3n_0P--478M8hQNVJY0nq7FVe-TC6vmqnANByqmpF9czwJGP45tMDmQHXNKuLnmYQfCr_YiIwVLYS4nxn_cs" />
+                    </form>
                 </div>
-                <a href="#" class="flex items-center opacity-70 group-hover:translate-x-3 transition">
-                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </a>
-            </li>
-            <li class="flex justify-between border-b border-gray-300 py-4 group hover:bg-gray-100 transition"
-                data-aos="fade-left" data-aos-delay="100">
-                <div>
-                    <span class="font-semibold">Secure UX</span>
-                    <span class="block text-sm text-[#606060]">Guidelines, best practices, and workshop tools for secure
-                        user experiences.</span>
-                </div>
-                <a href="#" class="flex items-center opacity-70 group-hover:translate-x-3 transition">
-                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </a>
-            </li>
-            <li class="flex justify-between border-b border-gray-300 py-4 group hover:bg-gray-100 transition"
-                data-aos="fade-left" data-aos-delay="200">
-                <div>
-                    <span class="font-semibold">Inclusive Design</span>
-                    <span class="block text-sm text-[#606060]">Toolkits and principles for designing inclusive
-                        experiences.</span>
-                </div>
-                <a href="#" class="flex items-center opacity-70 group-hover:translate-x-3 transition">
-                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </a>
-            </li>
-            <li class="flex justify-between border-b border-gray-300 py-4 group hover:bg-gray-100 transition"
-                data-aos="fade-left" data-aos-delay="300">
-                <div>
-                    <span class="font-semibold">Responsible AI</span>
-                    <span class="block text-sm text-[#606060]">Guides and resources for the ethical advancement of AI
-                        experiences.</span>
-                </div>
-                <a href="#" class="flex items-center opacity-70 group-hover:translate-x-3 transition">
-                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </a>
-            </li>
-            <li class="flex justify-between py-4 group hover:bg-gray-100 transition" data-aos="fade-left"
-                data-aos-delay="400">
-                <div>
-                    <span class="font-semibold">Fluent Design System</span>
-                    <span class="block text-sm text-[#606060]">Templates and samples for building your app the Fluent
-                        way.</span>
-                </div>
-                <a href="#" class="flex items-center opacity-70 group-hover:translate-x-3 transition">
-                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </a>
-            </li>
-        </ul>
+
+            </div>
+
+        </div>
     </section>
     <!-- Footer -->
-    <footer class="mt-10 bg-[#eae9e4] py-6 border-t border-gray-300">
-        <div
-            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0 text-sm opacity-80">
-            <div class="flex gap-4 mb-2 md:mb-0">
-                <a href="#"><img class="w-5 h-5 inline" src="https://ext.same-assets.com/4085776718/1802636693.svg"
-                        alt="Instagram"></a>
-                <a href="#"><img class="w-5 h-5 inline" src="https://ext.same-assets.com/4085776718/2536086883.svg"
-                        alt="Twitter"></a>
-                <a href="#"><img class="w-5 h-5 inline" src="https://ext.same-assets.com/4085776718/3917056187.svg"
-                        alt="Dribbble"></a>
-                <a href="#"><img class="w-5 h-5 inline" src="https://ext.same-assets.com/4085776718/841414986.svg"
-                        alt="Medium"></a>
+    <footer class="mt-10 py-10 text-white" style="background: linear-gradient(to right, #30a7f7, #79b9f4);">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-sm">
+            <div class="col-span-1">
+                <img src="./img/vssoft-logo.webp" alt="VSSOFT Logo" class="h-12 mb-4">
+                <p class="font-semibold">CÔNG TY CỔ PHẦN CÔNG NGHỆ</p>
+                <p class="text-sm">VSSOFT - Leading in Digital Solutions</p>
+                <div class="mt-4">
+                    <p><strong>Hotline:</strong> 0932.243.555</p>
+                    <p><strong>Email:</strong> vssoft@gmail.com</p>
+                </div>
             </div>
-            <div class="flex flex-wrap gap-4 items-center text-center">
-                <a href="#">Fluent Design</a>
-                <a href="#">Inclusive Design</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy</a>
-                <a href="#">Consumer Health Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Trademarks</a>
-                <span>© Microsoft 2025</span>
+            <div>
+                <h4 class="font-bold text-base mb-2">GIỚI THIỆU</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:underline">Thư viện ảnh</a></li>
+                    <li><a href="#" class="hover:underline">Giới thiệu chung</a></li>
+                </ul>
+                <h4 class="font-bold text-base mt-4 mb-2">TIN TỨC</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:underline">Tin công nghệ</a></li>
+                    <li><a href="#" class="hover:underline">Tin nội bộ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-2">SẢN PHẨM - DỊCH VỤ</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:underline">Sản phẩm - dịch vụ</a></li>
+                </ul>
+                <h4 class="font-bold text-base mt-4 mb-2">TUYỂN DỤNG</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:underline">Tin tuyển dụng</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-2">LIÊN HỆ</h4>
+                <p><strong>Trụ sở chính:</strong><br>55 Phan Huy Chú, P. Yết Kiêu, Hà Đông, Hà Nội</p>
+
+                <div class="flex gap-4 mt-4">
+                    <a href="#" class="hover:scale-110 transition">
+                        <i class="fab fa-facebook-square text-2xl text-[#1877f3]"></i>
+                    </a>
+                    <a href="#" class="hover:scale-110 transition">
+                        <i class="fab fa-youtube text-2xl text-[#ff0000]"></i>
+                    </a>
+                    <a href="#" class="hover:scale-110 transition">
+                        <i class="fab fa-linkedin text-2xl text-[#0a66c2]"></i>
+                    </a>
+                </div>
             </div>
         </div>
+        <div class="mt-6 border-t border-white/30 pt-4 text-center text-xs text-white/80">
+            © 2025 VSSOFT. Đã đăng ký bản quyền.
+        </div>
     </footer>
-    ...
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./style.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         AOS.init({
             duration: 900,
             once: true
         });
-    </script>
-    <script src="./style.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
         new Swiper('.product-swiper', {
             slidesPerView: 3,
             spaceBetween: 30,
@@ -428,6 +458,90 @@
             }
         });
     </script>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget" class="fixed bottom-6 right-6 z-50">
+        <button id="chatbot-toggle"
+            class="bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg w-14 h-14 flex items-center justify-center focus:outline-none">
+            <i class="fa-solid fa-comments text-2xl"></i>
+        </button>
+        <div id="chatbot-box" class="hidden mt-3 w-80 bg-white rounded-xl shadow-xl overflow-hidden flex flex-col">
+            <div class="bg-blue-600 text-white px-4 py-3 flex justify-between items-center">
+                <span class="font-semibold">Chat với VSSOFT</span>
+                <button id="chatbot-close" class="text-white hover:text-gray-200 text-xl">&times;</button>
+            </div>
+            <div class="flex-1 p-4 space-y-2 text-sm max-h-80 overflow-y-auto" id="chatbot-messages">
+                <div class="bg-gray-100 rounded-lg p-2 text-gray-700 self-start">Xin chào! Bạn cần hỗ trợ gì?</div>
+            </div>
+            <form id="chatbot-form" class="flex border-t">
+                <input type="text" id="chatbot-input" class="flex-1 px-3 py-2 text-sm focus:outline-none"
+                    placeholder="Nhập tin nhắn..." autocomplete="off" />
+                <button type="submit" class="px-4 text-blue-600 font-bold">Gửi</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotBox = document.getElementById('chatbot-box');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatbotForm = document.getElementById('chatbot-form');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+
+        chatbotToggle.onclick = () => chatbotBox.classList.toggle('hidden');
+        chatbotClose.onclick = () => chatbotBox.classList.add('hidden');
+
+        chatbotForm.onsubmit = async function (e) {
+            e.preventDefault();
+            const msg = chatbotInput.value.trim();
+            if (!msg) return;
+
+            // Hiển thị tin nhắn người dùng
+            const userMsg = document.createElement('div');
+            userMsg.className = 'bg-blue-100 rounded-lg p-2 text-blue-700 self-end text-right';
+            userMsg.textContent = msg;
+            chatbotMessages.appendChild(userMsg);
+            chatbotInput.value = '';
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+            const GEMINI_API_KEY = 'AIzaSyDY2fBnNyJ_8FIrdrEO_qN9hGilYbMg41Y'; // Cẩn trọng không để lộ key thật khi đưa lên production
+
+            try {
+                const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        contents: [
+                            {
+                                role: "user",
+                                parts: [{ text: msg }]
+                            }
+                        ]
+                    })
+                });
+
+                const data = await res.json();
+
+                const botMsg = document.createElement('div');
+                botMsg.className = 'bg-gray-100 rounded-lg p-2 text-gray-700 self-start';
+                botMsg.textContent =
+                    data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+                    'Xin lỗi, tôi chưa hiểu ý bạn.';
+                chatbotMessages.appendChild(botMsg);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            } catch (err) {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'bg-gray-100 rounded-lg p-2 text-gray-700 self-start';
+                botMsg.textContent = 'Có lỗi khi kết nối chatbot. Vui lòng thử lại sau.';
+                chatbotMessages.appendChild(botMsg);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        };
+    </script>
+
 </body>
 
 </html>
