@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./header.css">
     <script src="style.js"></script>
     <link rel="stylesheet" href="TinTuc.css".css">
+   
     <style>
         body {
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
@@ -25,9 +26,21 @@
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
             letter-spacing: -0.03em;
         }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     </style>
 
-    
+
 </head>
 
 <body>
@@ -36,7 +49,7 @@
             <img src="./img/vssoft-logo.webp" alt="Microsoft Logo" class="h-8 w-8">
             <nav class="hidden md:flex gap-7 ml-6 font-medium text-base">
                 <a href="/home2.html">Trang chủ</a>
-                <a href="#">Giới thiệu</a>
+                <a href="./GioiThieu.html">Giới thiệu</a>
                 <a href="/TinTuc.html" class="border-b-2 border-[#202632]">Tin tức</a>
                 <a href="#">Sản phẩm - Dịch vụ</a>
                 <a href="#">Tuyển dụng</a>
@@ -46,27 +59,20 @@
     </header>
 
     <div class="container">
-        
         <!-- Top Banner -->
-        <div class="top-banner"
-             style="background: #188cd9; border-radius: 1rem; padding: 3.5rem 1rem; margin: 2rem 0; text-align: center;">
+        <div class="top-banner" data-aos="fade-right" style="border-radius: 1rem; padding: 3.5rem 1rem; margin: 2rem 0; text-align: center;">
             <div class="banner-text"
                  style="color: #fff; font-size: 2.5rem; font-weight: bold; letter-spacing: -0.03em;">
                 Tin tức bệnh viện và y tế
             </div>
         </div>
 
-        <!-- Breaking News -->
-        <div class="breaking-news">
-            <div class="breaking-text">
-                Bệnh viện triển khai công nghệ AI mới trong chẩn đoán hình ảnh • Chương trình khám sức khỏe miễn phí cho người cao tuổi • Khai trương khoa tim mạch với trang thiết bị hiện đại
-            </div>
-        </div>
+        
 
         <!-- News Grid -->
         <div class="news-grid">
             <article class="news-card">
-                <div class="news-image"></div>
+                <div class="news-image"><img src="./img/benhvien.jpg" alt="AI y khoa" style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;"></div>
                 <div class="news-content">
                     <h3 class="news-title">Công nghệ AI mới trong chẩn đoán y khoa</h3>
                     <p class="news-excerpt">Bệnh viện đã áp dụng thành công hệ thống trí tuệ nhân tạo để hỗ trợ các bác sĩ trong việc chẩn đoán chính xác và nhanh chóng các bệnh lý phức tạp.</p>
@@ -78,7 +84,7 @@
             </article>
 
             <article class="news-card">
-                <div class="news-image"></div>
+                <div class="news-image"><img src="./img/benhvien.jpg" alt="Khám sức khỏe cộng đồng" style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;"></div>
                 <div class="news-content">
                     <h3 class="news-title">Khám sức khỏe miễn phí cho cộng đồng</h3>
                     <p class="news-excerpt">Chương trình khám sức khỏe định kỳ miễn phí dành cho người cao tuổi và trẻ em trong cộng đồng, nhằm phát hiện sớm các vấn đề sức khỏe.</p>
@@ -90,7 +96,7 @@
             </article>
 
             <article class="news-card">
-                <div class="news-image"></div>
+                <div class="news-image"><img src="./img/benhvien.jpg" alt="Khai trương khoa tim mạch" style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;"></div>
                 <div class="news-content">
                     <h3 class="news-title">Khai trương khoa tim mạch hiện đại</h3>
                     <p class="news-excerpt">Khoa tim mạch mới với trang thiết bị y tế tối tân từ châu Âu, phục vụ điều trị các bệnh lý tim mạch phức tạp.</p>
@@ -102,7 +108,7 @@
             </article>
 
             <article class="news-card">
-                <div class="news-image"></div>
+                <div class="news-image"><img src="./img/benhvien.jpg" alt="Đào tạo y bác sĩ trẻ" style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;"></div>
                 <div class="news-content">
                     <h3 class="news-title">Đào tạo y bác sĩ trẻ</h3>
                     <p class="news-excerpt">Chương trình đào tạo chuyên sâu cho các y bác sĩ trẻ với sự hướng dẫn của các chuyên gia đầu ngành trong và ngoài nước.</p>
@@ -114,7 +120,7 @@
             </article>
 
             <article class="news-card">
-                <div class="news-image"></div>
+                <div class="news-image"><img src="./img/benhvien.jpg" alt="Phẫu thuật thành công ca bệnh hiếm" style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;"></div>
                 <div class="news-content">
                     <h3 class="news-title">Phẫu thuật thành công ca bệnh hiếm</h3>
                     <p class="news-excerpt">Ekip bác sĩ đã thực hiện thành công ca phẫu thuật tách rời song sinh dính liền, mở ra hi vọng mới cho các bệnh nhi.</p>
@@ -126,7 +132,7 @@
             </article>
 
             <article class="news-card">
-                <div class="news-image"></div>
+                <div class="news-image"><img src="./img/benhvien.jpg" alt="Nghiên cứu vaccine mới" style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;"></div>
                 <div class="news-content">
                     <h3 class="news-title">Nghiên cứu vaccine mới</h3>
                     <p class="news-excerpt">Bệnh viện tham gia nghiên cứu thử nghiệm vaccine mới chống lại các bệnh truyền nhiễm nguy hiểm, hứa hẹn đột phá y học.</p>
@@ -139,7 +145,6 @@
         </div>
 
         <!-- Statistics -->
-        
 
         <!-- Health Tips -->
         <section class="health-tips">
@@ -172,16 +177,17 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-           
+
             <div class="social-links">
                 <a href="#" class="social-link">📘</a>
                 <a href="#" class="social-link">📷</a>
                 <a href="#" class="social-link">🐦</a>
                 <a href="#" class="social-link">📺</a>
             </div>
-            
+
         </div>
     </footer>
+    
 
     <script>
         // Smooth scrolling cho navigation
@@ -224,7 +230,7 @@
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
             });
-            
+
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
             });
@@ -240,7 +246,7 @@
                     current = target;
                     clearInterval(timer);
                 }
-                
+
                 if (target === 24) {
                     element.textContent = '24/7';
                 } else if (target >= 1000) {
@@ -257,11 +263,11 @@
                 if (entry.isIntersecting) {
                     const numbers = entry.target.querySelectorAll('.stat-number');
                     const targets = [50000, 200, 15, 24];
-                    
+
                     numbers.forEach((num, index) => {
                         animateCounter(num, targets[index]);
                     });
-                    
+
                     statsObserver.unobserve(entry.target);
                 }
             });
@@ -304,9 +310,9 @@
             ripple.style.height = '20px';
             ripple.style.pointerEvents = 'none';
             ripple.style.zIndex = '9999';
-            
+
             document.body.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -324,7 +330,16 @@
         `;
         document.head.appendChild(style);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // Animation duration
+        once: true, // Animation only happens once
+        easing: 'ease-in-out', // Easing function
+      });
+    </script>
 </body>
+
 </html>
 
 

@@ -9,170 +9,206 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/5e4f3dce79.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./home2.css">
     <style>
-        .section-gradient {
-            background: linear-gradient(to right, #e0f2ff, #ffffff);
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #eae9e4;
+            color: #202632;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #30a7f7, #79b9f4);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./img/vssoft2.webp') no-repeat center center/cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #188CD9;
+        }
+
+        .card {
+            background: #f5f9fe;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
     </style>
-    <script src="./style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
-<body class="bg-[#eae9e4] text-[#202632]">
+<body>
     <!-- Header -->
-    <header id="main-header" class="flex justify-between items-center px-6 py-4">
+    <header id="main-header" class="flex justify-between items-center px-6 py-2">
         <div class="flex align-items-center gap-3 justify-content-between w-100">
             <div class="header-left d-flex align-items-center">
                 <img src="./img/vssoft-logo.webp" alt="Microsoft Logo" class="h-8">
                 <nav class="hidden md:flex gap-7 ml-6 font-medium text-base">
-                    <a href="#" class="border-b-2 border-[#202632]">Trang chủ</a>
-                    <a href="#">Giới thiệu</a>
-                    <a href="/TinTuc.html">Tin tức</a>
-                    <a href="#">Sản phẩm - Dịch vụ</a>
-                    <a href="#">Tuyển dụng</a>
-                    <a href="#">Liên hệ</a>
+                    <a href="./home2.html">Trang chủ</a>
+                    <a href="./GioiThieu.html"  class="border-b-2 border-[#202632]">Giới thiệu</a>
+                    <a href="./TinTuc.html">Tin tức</a>
+                    <a href="./Product.html">Sản phẩm - Dịch vụ</a>
+                    <a href="./TuyenDung.html">Tuyển dụng</a>
+                    <a href="./contact_page.html">Liên hệ</a>
                 </nav>
             </div>
-            <button class="btn rounded-1" style="background-color: #188CD9;">Buy Now</button>
+            <button class="btn rounded-1" style="background-color: #79b9f4;">Buy Now</button>
         </div>
     </header>
-
     <!-- Hero Section -->
-    <section class="text-center py-20 section-gradient">
-        <h1 class="font-title text-5xl md:text-6xl font-bold mb-6 text-gray-800 mt-6" data-aos="fade-down">VSSOFT
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up">
-            VSSOFT là đơn vị tiên phong trong lĩnh vực phát triển phần mềm, cung cấp các giải pháp công nghệ toàn diện
-            giúp doanh nghiệp chuyển đổi số hiệu quả và bền vững.
-        </p>
-    </section>
-
-    <!-- Section: About Us -->
-    <section class="pt-24 pb-20 bg-white text-[#333] font-sans">
-        <div class="max-w-7xl mx-auto px-4 md:px-8">
-            <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
-                <div>
-                    <img src="./img/vssoft-logo.webp" alt="VSSOFT" class="h-20 mb-6">
-                    <h1 class="text-4xl font-bold text-[#188CD9] mb-4">VSSOFT - Leading in Digital Solutions</h1>
-                    <p class="text-lg leading-relaxed">Công ty Cổ phần Công nghệ VSSOFT là đơn vị tiên phong trong lĩnh
-                        vực
-                        cung cấp giải pháp phần mềm và chuyển đổi số. Chúng tôi cam kết đồng hành cùng doanh nghiệp
-                        trong
-                        việc tối ưu quy trình, nâng cao hiệu quả và tạo dựng giá trị bền vững bằng công nghệ hiện đại.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#f5f9fe] p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-[#188CD9] mb-2">TẦM NHÌN</h3>
-                    <p>Trở thành doanh nghiệp công nghệ hàng đầu khu vực về giải pháp phần mềm, góp phần thúc đẩy chuyển
-                        đổi
-                        số quốc gia.</p>
-                </div>
-                <div class="bg-[#f5f9fe] p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-[#188CD9] mb-2">SỨ MỆNH</h3>
-                    <p>Phát triển các sản phẩm và dịch vụ công nghệ mang tính ứng dụng cao, phục vụ hiệu quả cho cộng
-                        đồng
-                        doanh nghiệp và xã hội.</p>
-                </div>
-                <div class="bg-[#f5f9fe] p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-[#188CD9] mb-2">GIÁ TRỊ CỐT LÕI</h3>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li>Khách hàng là trung tâm</li>
-                        <li>Chất lượng làm đầu</li>
-                        <li>Sáng tạo và đổi mới</li>
-                        <li>Hợp tác bền vững</li>
-                    </ul>
-                </div>
+    <section class="hero relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full" style="background: radial-gradient(circle at 70% 30%, #79b9f4 0%, #30a7f7 60%, transparent 100%); opacity: 0.25; z-index: 0;"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center min-h-[350px]">
+            <h1 data-aos="zoom-in" class="font-bold text-5xl md:text-6xl drop-shadow-lg mb-4">VSSOFT</h1>
+            <p data-aos="zoom-in" data-aos-delay="200" class="text-xl md:text-2xl max-w-2xl mx-auto font-medium drop-shadow">Chúng tôi cung cấp các giải pháp công nghệ toàn diện giúp doanh nghiệp chuyển đổi số hiệu quả và bền vững.</p>
+            <div class="mt-8 flex gap-4 justify-center">
+                <a href="#about" class="px-6 py-3 rounded-full font-semibold text-white bg-[#188CD9] shadow-lg hover:bg-[#79b9f4] transition-all duration-300" data-aos="fade-up" data-aos-delay="400">Tìm hiểu thêm</a>
+                <a href="./contact_page.html" class="px-6 py-3 rounded-full font-semibold text-[#188CD9] bg-white shadow-lg hover:bg-[#e0f2ff] border border-[#188CD9] transition-all duration-300" data-aos="fade-up" data-aos-delay="500">Liên hệ</a>
             </div>
         </div>
     </section>
 
-
-    <!-- Section: Core Values -->
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Giá Trị Cốt Lõi</h2>
-            <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-2"><i class="fas fa-check-circle"></i></div>
-                    <h3 class="text-xl font-semibold mb-2">Chất lượng</h3>
-                    <p class="text-sm text-gray-600">Cam kết với sản phẩm và dịch vụ đạt chuẩn cao nhất, đặt khách hàng
-                        là trung tâm.</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-2"><i class="fas fa-lightbulb"></i></div>
-                    <h3 class="text-xl font-semibold mb-2">Sáng tạo</h3>
-                    <p class="text-sm text-gray-600">Không ngừng đổi mới công nghệ, giải pháp và tư duy để tạo ra sự
-                        khác biệt.</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-2"><i class="fas fa-handshake"></i></div>
-                    <h3 class="text-xl font-semibold mb-2">Hợp tác</h3>
-                    <p class="text-sm text-gray-600">Xây dựng mối quan hệ tin cậy, bền vững với khách hàng và đối tác.
-                    </p>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="section bg-white rounded-3xl shadow-xl max-w-5xl mx-auto mt-[-60px] relative z-20">
+        <h2 data-aos="fade-up" class="mb-8">Về Chúng Tôi</h2>
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div data-aos="fade-right" class="flex justify-center">
+                <img src="./img/vssoft.webp" alt="VSSOFT" class="rounded-2xl shadow-2xl h-72 object-cover border-4 border-[#79b9f4]" style="max-width: 25.5rem;">
             </div>
+            <div data-aos="fade-left">
+                <p class="text-lg leading-relaxed mb-4">Công ty Cổ phần Công nghệ VSSOFT là đơn vị tiên phong trong lĩnh vực cung cấp giải pháp phần mềm và chuyển đổi số. Chúng tôi cam kết đồng hành cùng doanh nghiệp trong việc tối ưu quy trình, nâng cao hiệu quả và tạo dựng giá trị bền vững bằng công nghệ hiện đại.</p>
+                <ul class="list-disc list-inside text-base text-[#188CD9] space-y-2">
+                    <li>Đội ngũ chuyên gia giàu kinh nghiệm, sáng tạo và tận tâm</li>
+                    <li>Giải pháp công nghệ tiên tiến, linh hoạt theo nhu cầu khách hàng</li>
+                    <li>Hợp tác bền vững, phát triển cùng đối tác và cộng đồng</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section bg-gradient-to-r from-[#e0f2ff] to-[#f5f9fe] rounded-3xl shadow-xl max-w-6xl mx-auto mt-12">
+        <h2 data-aos="fade-up">Giá Trị Cốt Lõi</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+            <div class="card text-center py-8" data-aos="flip-left">
+                <div class="text-4xl mb-3 text-[#188CD9]"><i class="fas fa-gem"></i></div>
+                <h3 class="text-xl font-semibold text-[#188CD9] mb-2">Chất lượng</h3>
+                <p>Cam kết với sản phẩm và dịch vụ đạt chuẩn cao nhất, đặt khách hàng là trung tâm.</p>
+            </div> 
+            <div class="card text-center py-8" data-aos="flip-left" data-aos-delay="100">
+                <div class="text-4xl mb-3 text-[#188CD9]"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="text-xl font-semibold text-[#188CD9] mb-2">Sáng tạo</h3>
+                <p>Không ngừng đổi mới công nghệ, giải pháp và tư duy để tạo ra sự khác biệt.</p>
+            </div>
+            <div class="card text-center py-8" data-aos="flip-left" data-aos-delay="200">
+                <div class="text-4xl mb-3 text-[#188CD9]"><i class="fas fa-handshake"></i></div>
+                <h3 class="text-xl font-semibold text-[#188CD9] mb-2">Hợp tác</h3>
+                <p>Xây dựng mối quan hệ tin cậy, bền vững với khách hàng và đối tác.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section bg-white rounded-3xl shadow-xl max-w-6xl mx-auto mt-12">
+        <h2 data-aos="fade-up">Đội Ngũ Nhân Sự</h2>
+        <div class="grid md:grid-cols-3 gap-10 items-center mt-8">
+            <div class="card text-center py-8" data-aos="zoom-in">
+                <img src="./img/human-2.jpg" alt="CEO" class="mx-auto rounded-full shadow-lg mb-4 border-4 border-[#79b9f4]" style="width: 120px; height: 120px; object-fit: cover; background: #e0f2ff;">
+                <h4 class="text-xl font-bold text-[#188CD9] mb-1">Nguyễn Đình Thụ</h4>
+                <p class="font-medium text-gray-700 mb-2">Tổng Giám Đốc</p>
+                <p class="text-gray-600 text-sm">Người sáng lập và dẫn dắt VSSOFT với tầm nhìn chiến lược, hơn 15 năm kinh nghiệm trong lĩnh vực công nghệ thông tin.</p>
+            </div>
+            <div class="card text-center py-8" data-aos="zoom-in" data-aos-delay="100">
+                <img src="./img/human-2.jpg" alt="CTO" class="mx-auto rounded-full shadow-lg mb-4 border-4 border-[#79b9f4]" style="width: 120px; height: 120px; object-fit: cover; background: #e0f2ff;">
+                <h4 class="text-xl font-bold text-[#188CD9] mb-1">Ngọc Chính</h4>
+                <p class="font-medium text-gray-700 mb-2">Giám Đốc Công Nghệ</p>
+                <p class="text-gray-600 text-sm">Chuyên gia giải pháp phần mềm, phụ trách phát triển công nghệ và đổi mới sáng tạo tại VSSOFT.</p>
+            </div>
+            <div class="card text-center py-8" data-aos="zoom-in" data-aos-delay="200">
+                <img src="./img/human-2.jpg" alt="Project Manager" class="mx-auto rounded-full shadow-lg mb-4 border-4 border-[#79b9f4]" style="width: 120px; height: 120px; object-fit: cover; background: #e0f2ff;">
+                <h4 class="text-xl font-bold text-[#188CD9] mb-1">Anh Long</h4>
+                <p class="font-medium text-gray-700 mb-2">Thực Tập Sinh</p>
+                <p class="text-gray-600 text-sm">Quản lý các dự án chuyển đổi số lớn, đảm bảo tiến độ và chất lượng sản phẩm cho khách hàng.</p>
+            </div>
+           
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class=" py-10 text-white" style="background: linear-gradient(to right, #30a7f7, #79b9f4);">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-sm">
-            <div class="col-span-1">
-                <img src="./img/vssoft-logo.webp" alt="VSSOFT Logo" class="h-12 mb-4">
-                <p class="font-semibold">CÔNG TY CỔ PHẦN CÔNG NGHỆ</p>
-                <p class="text-sm">VSSOFT - Leading in Digital Solutions</p>
-                <div class="mt-4">
-                    <p><strong>Hotline:</strong> 0932.243.555</p>
-                    <p><strong>Email:</strong> vssoft@gmail.com</p>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-bold text-base mb-2">GIỚI THIỆU</h4>
-                <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">Thư viện ảnh</a></li>
-                    <li><a href="#" class="hover:underline">Giới thiệu chung</a></li>
-                </ul>
-                <h4 class="font-bold text-base mt-4 mb-2">TIN TỨC</h4>
-                <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">Tin công nghệ</a></li>
-                    <li><a href="#" class="hover:underline">Tin nội bộ</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-base mb-2">SẢN PHẨM - DỊCH VỤ</h4>
-                <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">Sản phẩm - dịch vụ</a></li>
-                </ul>
-                <h4 class="font-bold text-base mt-4 mb-2">TUYỂN DỤNG</h4>
-                <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">Tin tuyển dụng</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-base mb-2">LIÊN HỆ</h4>
-                <p><strong>Trụ sở chính:</strong><br>55 Phan Huy Chú, P. Yết Kiêu, Hà Đông, Hà Nội</p>
-
-                <div class="flex gap-4 mt-4">
-                    <a href="#" class="text-white hover:text-gray-100"><i
-                            class="fab fa-facebook-square text-2xl"></i></a>
-                    <a href="#" class="text-white hover:text-gray-100"><i class="fab fa-youtube text-2xl"></i></a>
-                    <a href="#" class="text-white hover:text-gray-100"><i class="fab fa-linkedin text-2xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="mt-6 border-t border-white/30 pt-4 text-center text-xs text-white/80">
-            © 2025 VSSOFT. Đã đăng ký bản quyền.
+    <footer class="py-10 text-white mt-16" style="background: linear-gradient(to right, #30a7f7, #79b9f4);">
+        <div class="container mx-auto text-center">
+            <p>© 2025 VSSOFT. Đã đăng ký bản quyền.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 900, once: true });
+        AOS.init({ duration: 1200, once: true });
     </script>
 </body>
 
