@@ -20,3 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(nextSlide, 3000);
     showSlide(current);
 });
+
+// Header fixed on scroll
+window.addEventListener('scroll', function () {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+        header.classList.add('header-fixed');
+    } else {
+        header.classList.remove('header-fixed');
+    }
+});
