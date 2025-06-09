@@ -30,15 +30,15 @@
 
 <body class="bg-[#eae9e4] text-[#202632]">
     <!-- Header -->
-    <header id="main-header" class="flex justify-between items-center px-6 py-2">
+    <header id="main-header" class="flex justify-between items-center px-6 py-1">
         <div class="flex align-items-center gap-3 justify-content-between w-100">
             <div class="header-left d-flex align-items-center">
                 <img src="./img/vssoft-logo.webp" alt="Microsoft Logo" class="h-8">
                 <nav class="hidden md:flex gap-7 ml-6 font-medium text-base">
-                    <a href="./home2.html" class="border-b-2 border-[#202632]">Trang chủ</a>
+                    <a href="./home2.html">Trang chủ</a>
                     <a href="./GioiThieu.html">Giới thiệu</a>
                     <a href="./TinTuc.html">Tin tức</a>
-                    <a href="">Sản phẩm - Dịch vụ</a>
+                    <a href="./Product.html" class="border-b-2 border-[#202632]">Sản phẩm - Dịch vụ</a>
                     <a href="./TuyenDung.html">Tuyển dụng</a>
                     <a href="./contact_page.html">Liên hệ</a>
                 </nav>
@@ -55,8 +55,8 @@
     </section>
 
 
-    <section class="pt-24 pb-20 bg-gradient-to-b from-[#f0f7ff] to-white text-[#333] font-sans">
-        <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <section class="pt-24 pb-20 bg-gradient-to-b from-[#eae9e4] to-white text-[#333] font-sans">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 card card-body" style="border-radius: 20px;">
             <div class="text-center mb-16" data-aos="fade-down">
                 <h1 class="text-4xl font-extrabold text-[#188CD9] mb-4">SẢN PHẨM & DỊCH VỤ</h1>
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -68,7 +68,7 @@
             <!-- LOTUS -->
             <div class="grid md:grid-cols-2 gap-10 mb-20 items-center" data-aos="fade-up">
                 <div class="overflow-hidden rounded-xl shadow-xl">
-                    <img src="./img/lotus-demo.jpg" alt="Lotus" class="w-full h-auto">
+                    <img src="./img/lotus.jpg" alt="Lotus" class="w-full h-56 object-cover rounded-xl mx-auto">
                 </div>
                 <div>
                     <h2 class="text-xl font-bold mb-2">LOTUS - GIẢI PHÁP QUẢN LÝ ĐỒ DÙNG TRANG THIẾT BỊ</h2>
@@ -86,7 +86,7 @@
             <!-- EMRC -->
             <div class="grid md:grid-cols-2 gap-10 mb-20 items-center" data-aos="fade-up">
                 <div class="overflow-hidden rounded-xl shadow-xl order-2 md:order-1">
-                    <img src="./img/emrc-icon.png" alt="EMRC" class="mx-auto w-2/3 h-auto">
+                    <img src="./img/emrc.jpg" alt="EMRC" class="w-full h-56 object-cover rounded-xl mx-auto">
                 </div>
                 <div class="order-1 md:order-2">
                     <h2 class="text-xl font-bold mb-2">EMRC - QUẢN LÝ HỒ SƠ Y TẾ ĐIỆN TỬ</h2>
@@ -94,7 +94,7 @@
                         cứu,
                         quản lý điều trị hiệu quả, đáp ứng tiêu chuẩn Bộ Y tế.</p>
                     <a href="#"
-                        class="inline-block bg-[#188CD9] text-white px-6 py-2 rounded hover:bg-blue-700 transition">Chi
+                        class="inline-block bg-pink-500 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Chi
                         tiết</a>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <!-- ERP -->
             <div class="grid md:grid-cols-2 gap-10 mb-20 items-center" data-aos="fade-up">
                 <div class="overflow-hidden rounded-xl shadow-xl">
-                    <img src="./img/erp-icon.png" alt="ERP" class="mx-auto w-2/3 h-auto">
+                    <img src="./img/trang_thiet_bi.jpg" alt="ERP" class="w-full h-56 object-cover rounded-xl mx-auto">
                 </div>
                 <div>
                     <h2 class="text-xl font-bold mb-2">ERP - GIẢI PHÁP QUẢN TRỊ TỔNG THỂ DOANH NGHIỆP</h2>
@@ -118,7 +118,7 @@
             <!-- CRM -->
             <div class="grid md:grid-cols-2 gap-10 mb-20 items-center" data-aos="fade-up">
                 <div class="overflow-hidden rounded-xl shadow-xl order-2 md:order-1">
-                    <img src="./img/crm-icon.png" alt="CRM" class="mx-auto w-2/3 h-auto">
+                    <img src="./img/crp.png" alt="CRM" class="w-full h-56 object-cover rounded-xl mx-auto">
                 </div>
                 <div class="order-1 md:order-2">
                     <h2 class="text-xl font-bold mb-2">CRM - QUẢN LÝ KHÁCH HÀNG VÀ BÁN HÀNG</h2>
@@ -148,6 +148,20 @@
                     <img src="./img/deployment.png" alt="Triển khai hệ thống" class="rounded-xl shadow-xl">
                 </div>
             </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="inline-flex items-center space-x-1 rounded-lg shadow-md overflow-hidden bg-white border border-gray-300 text-gray-700 text-sm font-medium"
+                    aria-label="Pagination">
+                    <a href="#" class="px-4 py-2 hover:bg-blue-100 transition">← Trước</a>
+                    <a href="#" class="px-4 py-2 bg-blue-100 text-blue-700 font-semibold">1</a>
+                    <a href="#" class="px-4 py-2 hover:bg-blue-100 transition">2</a>
+                    <a href="#" class="px-4 py-2 hover:bg-blue-100 transition">3</a>
+                    <span class="px-4 py-2 text-gray-400">...</span>
+                    <a href="#" class="px-4 py-2 hover:bg-blue-100 transition">8</a>
+                    <a href="#" class="px-4 py-2 hover:bg-blue-100 transition">Sau →</a>
+                </nav>
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script>
@@ -158,7 +172,7 @@
 
 
     <!-- Footer -->
-    <footer class="mt-10 py-10 text-white" style="background: linear-gradient(to right, #30a7f7, #79b9f4);">
+    <footer class=" py-10 text-white" style="background: linear-gradient(to right, #30a7f7, #79b9f4);">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-sm">
             <div class="col-span-1">
                 <img src="./img/vssoft-logo.webp" alt="VSSOFT Logo" class="h-12 mb-4">

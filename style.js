@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+        duration: 900,
+        once: true
+    });
     const slides = document.querySelectorAll('#auto-banner-slider .slide-item');
     let current = 0;
     let prev = null;
@@ -29,4 +33,9 @@ window.addEventListener('scroll', function () {
     } else {
         header.classList.remove('header-fixed');
     }
+});
+
+AOS.init({
+    duration: 900,
+    once: true
 });
