@@ -11,7 +11,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #0078d4;
+    color: #188CD9 ;
 }
 
 nav a::after {
@@ -21,7 +21,7 @@ nav a::after {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background: #0078d4;
+    background: #188CD9 ;
     transform: scaleX(0);
     transition: transform 0.3s cubic-bezier(.4, 0, .2, 1);
     transform-origin: left;
